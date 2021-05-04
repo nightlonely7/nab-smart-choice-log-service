@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: log-service
+  config:
+    import: optional:configserver:http://host.docker.internal:8888
+  cloud:
+    config:
+      label: main
+  datasource:
+    generate-unique-name: false
+
+server:
+  port: 8083
